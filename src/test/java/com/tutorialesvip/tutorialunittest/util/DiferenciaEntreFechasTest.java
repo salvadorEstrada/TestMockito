@@ -1,13 +1,13 @@
 package com.tutorialesvip.tutorialunittest.util;
 
-import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDate;
 import java.time.Period;
 
-import static org.junit.jupiter.api.Assertions.*;
+
 
 class DiferenciaEntreFechasTest {
 
@@ -17,12 +17,13 @@ class DiferenciaEntreFechasTest {
     @Test
     void calculateYearsOfIndependency() {
         diferenciaEntreFechas = new DiferenciaEntreFechas();
-        String fechaIndependencia = "27/02/1844";
+        LocalDate today = LocalDate.now();
+        String fechaIndependencia ="16/08/1810";
 
-        Period resultado = diferenciaEntreFechas.calculateYearsOfIndependency(fechaIndependencia);
+        Period period = diferenciaEntreFechas.calculateYearsOfIndependency(fechaIndependencia);
 
-        Assertions.assertEquals(2,resultado.getMonths() );
-        Assertions.assertEquals(29,resultado.getDays() );
-        Assertions.assertEquals(176,resultado.getYears() );
+        assertEquals(period.getMonths(),11);
+        assertEquals(period.getDays(),25);
+        assertEquals(period.getYears(),213);
     }
 }

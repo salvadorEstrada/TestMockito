@@ -8,3 +8,4 @@ insert into country (iso_code,country_name,country_capital,country_independence_
 insert into country (iso_code,country_name,country_capital,country_independence_date) values ('GT','Guatemala','Ciudad de Guatemala','15/09/1821');
 insert into country (iso_code,country_name,country_capital,country_independence_date) values ('CR','Costa Rica','San José','15/07/1821');
 insert into country (iso_code,country_name,country_capital,country_independence_date) values ('BO','Bolivia','Sucre','06/08/1825');
+insert into country (iso_code,country_name,country_capital,country_independence_date) values ('MX','Mexico','CDMex','15/08/1810');

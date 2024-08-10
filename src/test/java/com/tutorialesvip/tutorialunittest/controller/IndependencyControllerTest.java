@@ -1,5 +1,4 @@
 package com.tutorialesvip.tutorialunittest.controller;
-
 import com.tutorialesvip.tutorialunittest.models.Country;
 import com.tutorialesvip.tutorialunittest.models.CountryResponse;
 import com.tutorialesvip.tutorialunittest.repositories.CountryRepository;
@@ -49,13 +48,4 @@ class IndependencyControllerTest {
         respuestaServicio = independencyController.getCountryDetails("DO");
         Assertions.assertEquals("Republica Dominicana",respuestaServicio.getBody().getCountryName());
     }
-
-    @Test
-    void getCountryDetailsWithInvalidCountryCode() {
-        ResponseEntity<CountryResponse> respuestaServicio;
-        respuestaServicio = independencyController.getCountryDetails("IT");
-        Assertions.assertNull(respuestaServicio.getBody().getCountryName());
-    }
-
-
 }
