@@ -41,7 +41,7 @@ class IndependencyControllerTest {
         Mockito.when(countryRepositoryMock.findCountryByIsoCode("DO")).thenReturn(mockCountry);
 
     }
-
+    //este es un tes1
     @Test
     void getCountryDetailsWithValidCountryCode() {
         ResponseEntity<CountryResponse> respuestaServicio;
